@@ -1,1 +1,1 @@
-# CEPH# ceph-docker
+# CEPH
