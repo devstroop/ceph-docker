@@ -1,0 +1,11 @@
+services:
+  ceph-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    # cap_add:
+    #   - SYS_ADMIN
+    # devices:
+    #   - "/dev/fuse:/dev/fuse"
+    command: echo "Ceph Manager"
