@@ -13,8 +13,11 @@ RUN apt-get update && apt-get install -y \
 # Remove erroneous command
 # RUN cat /etc/netplan/00-installer-config.yaml
 
-# Change root password
-RUN sudo passwd root
+# Remove the command to change root password
+# RUN sudo passwd root
 
 # Enable root login
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# Set root password
+RUN echo 'root:password' | chpasswd
