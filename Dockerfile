@@ -7,11 +7,11 @@ RUN apt-get update && apt-get install -y \
     net-tools \
     lvm2
 
-# Install openssh-server
-RUN sudo apt install openssh-server
+# Remove redundant openssh-server installation
+# RUN sudo apt install openssh-server
 
-# Install net-tools
-RUN cat /etc/netplan/00-installer-config.yaml
+# Remove erroneous command
+# RUN cat /etc/netplan/00-installer-config.yaml
 
 # Change root password
 RUN sudo passwd root
